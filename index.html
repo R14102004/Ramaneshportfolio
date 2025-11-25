@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ramaneshwaran K — Fullstack Developer & Digital Marketer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="home">
+    <div class="page-loader" data-loader>
+      <div class="loader-core">
+        <span class="loader-ring"></span>
+        <p>Spinning up the singularity...</p>
+      </div>
+    </div>
+
+    <div class="cursor" data-cursor></div>
+    <div class="cursor-trail" data-cursor-trail></div>
+
+    <div id="lenis-root">
+      <header class="site-header glass-blur">
+        <div class="logo">
+          <span>RK</span>
+          <p>Ramaneshwaran K</p>
+        </div>
+        <nav class="site-nav" data-nav>
+          <a href="index.html" class="is-active">Home</a>
+          <a href="about.html" data-transition="page">About</a>
+          <a href="skills.html" data-transition="page">Skills</a>
+          <a href="projects.html" data-transition="page">Projects</a>
+          <a href="#contact" class="ghost-link">Contact</a>
+        </nav>
+        <button class="menu-toggle" data-menu>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </header>
+
+      <main>
+        <section class="hero" id="hero">
+          <canvas id="blackhole-canvas" aria-hidden="true"></canvas>
+          <div class="hero-content">
+            <p class="eyebrow">Fullstack Developer · Digital Marketer</p>
+            <h1>
+              Ramaneshwaran K
+              <span class="neon-glow">Crafting stellar digital journeys.</span>
+            </h1>
+            <p class="hero-copy">
+              I merge performant engineering with magnetic brand storytelling to
+              launch immersive products across the galaxy of devices.
+            </p>
+            <div class="hero-cta">
+              <a href="projects.html" class="btn primary" data-distort>
+                Explore My Work
+              </a>
+              <a href="about.html" class="btn secondary" data-distort>
+                Learn More
+              </a>
+            </div>
+          </div>
+
+          <div class="floating-cards">
+            <article class="glass-card floating" data-float>
+              <h3>Fullstack Ops</h3>
+              <p>Next.js, Node, and edge-ready pipelines.</p>
+            </article>
+            <article class="glass-card floating delayed" data-float>
+              <h3>Growth Engines</h3>
+              <p>Performance marketing + automation funnels.</p>
+            </article>
+            <article class="glass-card floating slow" data-float>
+              <h3>Experience Design</h3>
+              <p>Immersive 3D storytelling and UX strategy.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="quick-nav">
+          <div class="glass-grid">
+            <a href="about.html" class="glass-card" data-distort>
+              <h4>About</h4>
+              <p>Origin story, cosmic journey, core values.</p>
+            </a>
+            <a href="skills.html" class="glass-card" data-distort>
+              <h4>Skills</h4>
+              <p>Stacks, tools, and marketing arsenals.</p>
+            </a>
+            <a href="projects.html" class="glass-card" data-distort>
+              <h4>Projects</h4>
+              <p>Selected work with realtime previews.</p>
+            </a>
+            <a href="#contact" class="glass-card" data-distort>
+              <h4>Contact</h4>
+              <p>Let’s build the next gravity well together.</p>
+            </a>
+          </div>
+        </section>
+
+        <section class="contact" id="contact">
+          <div class="glass-panel">
+            <h2>Ready to bend spacetime?</h2>
+            <p>
+              Book a call, drop a briefing, or simply say hi. I’ll respond
+              within one orbit.
+            </p>
+            <div class="contact-links">
+              <a href="mailto:hello@ramaneshwaran.dev" data-distort>
+                hello@ramaneshwaran.dev
+              </a>
+              <a href="https://www.linkedin.com" target="_blank" rel="noreferrer" data-distort>
+                LinkedIn
+              </a>
+              <a href="https://github.com" target="_blank" rel="noreferrer" data-distort>
+                GitHub
+              </a>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p>© <span data-year></span> Ramaneshwaran K. Crafted in a gravity well.</p>
+      </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r152/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.31/bundled/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hover-effect.umd.js"></script>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

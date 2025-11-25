@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Projects — Ramaneshwaran K</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="projects">
+    <div class="page-loader" data-loader>
+      <div class="loader-core">
+        <span class="loader-ring"></span>
+        <p>Calibrating project nebula...</p>
+      </div>
+    </div>
+
+    <div class="cursor" data-cursor></div>
+    <div class="cursor-trail" data-cursor-trail></div>
+
+    <div id="lenis-root">
+      <header class="site-header glass-blur">
+        <div class="logo">
+          <span>RK</span>
+          <p>Ramaneshwaran K</p>
+        </div>
+        <nav class="site-nav" data-nav>
+          <a href="index.html">Home</a>
+          <a href="about.html" data-transition="page">About</a>
+          <a href="skills.html" data-transition="page">Skills</a>
+          <a href="projects.html" class="is-active">Projects</a>
+          <a href="index.html#contact" class="ghost-link" data-transition="page">
+            Contact
+          </a>
+        </nav>
+        <button class="menu-toggle" data-menu>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </header>
+
+      <main>
+        <section class="page-hero">
+          <div class="page-headline">
+            <p class="eyebrow">Projects</p>
+            <h1>Immersive journeys across the product galaxy.</h1>
+            <p>
+              Selected builds that merge WebGL storytelling, premium branding,
+              and growth-ready architectures. Hover to distort, click to dive
+              deeper.
+            </p>
+          </div>
+        </section>
+
+        <section class="projects-grid" data-project-grid>
+          <article class="project-card glass-card" data-project data-distort-card>
+            <div class="project-thumb" data-hover-visual></div>
+            <div class="project-meta">
+              <h3>Gravity Commerce</h3>
+              <p>WebGL-enabled storefront with generative merch previews.</p>
+              <button class="btn tertiary" data-modal-trigger="gravity">
+                View Details
+              </button>
+            </div>
+          </article>
+          <article class="project-card glass-card" data-project data-distort-card>
+            <div class="project-thumb" data-hover-visual></div>
+            <div class="project-meta">
+              <h3>PulseOS</h3>
+              <p>Realtime health dashboard with micro-interaction therapy.</p>
+              <button class="btn tertiary" data-modal-trigger="pulse">
+                View Details
+              </button>
+            </div>
+          </article>
+          <article class="project-card glass-card" data-project data-distort-card>
+            <div class="project-thumb" data-hover-visual></div>
+            <div class="project-meta">
+              <h3>Orbit Events</h3>
+              <p>Immersive event funnel with marketing automation suite.</p>
+              <button class="btn tertiary" data-modal-trigger="orbit">
+                View Details
+              </button>
+            </div>
+          </article>
+        </section>
+
+        <section class="background-particles" aria-hidden="true">
+          <canvas id="project-space"></canvas>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p>© <span data-year></span> Ramaneshwaran K. Crafted in a gravity well.</p>
+      </footer>
+    </div>
+
+    <section class="project-modal" data-modal>
+      <div class="modal-panel glass-panel" data-modal-panel>
+        <button class="modal-close" data-modal-close aria-label="Close modal">
+          ×
+        </button>
+        <div class="modal-content">
+          <h3 data-modal-title></h3>
+          <p data-modal-description></p>
+          <ul data-modal-highlights></ul>
+          <div class="modal-actions">
+            <a href="#" class="btn primary" target="_blank" rel="noreferrer">
+              Launch Project
+            </a>
+            <a href="#" class="btn secondary" target="_blank" rel="noreferrer">
+              Case Study
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r152/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.31/bundled/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hover-effect.umd.js"></script>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

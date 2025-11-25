@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About — Ramaneshwaran K</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body data-page="about">
+    <div class="page-loader" data-loader>
+      <div class="loader-core">
+        <span class="loader-ring"></span>
+        <p>Stabilising wormhole...</p>
+      </div>
+    </div>
+
+    <div class="cursor" data-cursor></div>
+    <div class="cursor-trail" data-cursor-trail></div>
+
+    <div id="lenis-root">
+      <header class="site-header glass-blur">
+        <div class="logo">
+          <span>RK</span>
+          <p>Ramaneshwaran K</p>
+        </div>
+        <nav class="site-nav" data-nav>
+          <a href="index.html">Home</a>
+          <a href="about.html" class="is-active">About</a>
+          <a href="skills.html" data-transition="page">Skills</a>
+          <a href="projects.html" data-transition="page">Projects</a>
+          <a href="index.html#contact" class="ghost-link" data-transition="page">
+            Contact
+          </a>
+        </nav>
+        <button class="menu-toggle" data-menu>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </header>
+
+      <main>
+        <section class="page-hero">
+          <div class="profile-frame glass-blur">
+            <img
+              src="assets/images/profile-placeholder.svg"
+              alt="Portrait of Ramaneshwaran K"
+              loading="lazy"
+            />
+          </div>
+          <div class="page-headline">
+            <p class="eyebrow">About</p>
+            <h1>Designing experiences that orbit user needs.</h1>
+            <p>
+              I’m Ramaneshwaran K, a fullstack developer and digital marketer
+              blending immersive visuals with measurable growth systems. My work
+              spans SaaS, consumer tech, and experiential campaigns that live on
+              the bleeding edge of the Web.
+            </p>
+          </div>
+        </section>
+
+        <section class="about-content">
+          <article class="glass-panel">
+            <h2>Mission</h2>
+            <p>
+              Build vivid, high-converting experiences where engineering rigor
+              meets emotionally resonant stories. Every product should feel like
+              a gravity field—pulling audiences back through value and delight.
+            </p>
+          </article>
+
+          <article class="glass-panel">
+            <h2>Approach</h2>
+            <ul class="pill-list">
+              <li>Systems thinking</li>
+              <li>Continuous discovery</li>
+              <li>Creative automation</li>
+              <li>Growth analytics</li>
+            </ul>
+          </article>
+        </section>
+
+        <section class="timeline">
+          <h2>Trajectory</h2>
+          <div class="timeline-grid" data-timeline>
+            <article class="timeline-node glass-card">
+              <p class="year">2024 — Present</p>
+              <h3>Lead Fullstack & Marketing</h3>
+              <p>
+                Driving multi-channel launch campaigns, building composable
+                architectures, mentoring hybrid engineering teams.
+              </p>
+            </article>
+            <article class="timeline-node glass-card">
+              <p class="year">2022 — 2024</p>
+              <h3>Product Experience Architect</h3>
+              <p>
+                Crafted WebGL micro-sites, integrated CRM automations, and
+                increased conversion rates by 38% through experimentation.
+              </p>
+            </article>
+            <article class="timeline-node glass-card">
+              <p class="year">2019 — 2022</p>
+              <h3>Growth Engineer</h3>
+              <p>
+                Built data-driven marketing engines, launched content systems,
+                and implemented personalization tooling.
+              </p>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p>© <span data-year></span> Ramaneshwaran K. Crafted in a gravity well.</p>
+      </footer>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r152/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.31/bundled/lenis.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/hover-effect.umd.js"></script>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
