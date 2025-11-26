@@ -1,6 +1,14 @@
 export async function initBlackhole(canvasSelector) {
   const canvas = document.querySelector(canvasSelector);
-  if (!canvas || !window.THREE) return;
+  if (!canvas) {
+    console.error("Blackhole Error: Canvas element not found with selector:", canvasSelector);
+    return;
+  }
+  if (!window.THREE) {
+    console.error("Blackhole Error: THREE.js not found on window object");
+    return;
+  }
+  console.log("Blackhole: Initializing... Canvas found, THREE found.");
   const clock = new THREE.Clock();
 
   let shaders;
@@ -9,6 +17,8 @@ export async function initBlackhole(canvasSelector) {
       loadShader("assets/shaders/blackhole.vert.glsl"),
       loadShader("assets/shaders/blackhole.frag.glsl"),
     ]);
+    console.log("Blackhole: Shaders loaded. Vertex length:", shaders[0].length, "Fragment length:", shaders[1].length);
+    console.log("Blackhole: Vertex Shader Preview:", shaders[0].substring(0, 100));
   } catch (error) {
     console.warn("Shader load failed", error);
     return;
@@ -32,13 +42,14 @@ export async function initBlackhole(canvasSelector) {
   );
   camera.position.z = 2.6;
 
-  const geometry = new THREE.PlaneGeometry(4, 4, 64, 64);
+  const geometry = new THREE.PlaneGeometry(2, 2); // Full screen quad
   const uniforms = {
     uTime: { value: 0 },
     uScroll: { value: 0 },
     uResolution: {
       value: new THREE.Vector2(canvas.offsetWidth, canvas.offsetHeight),
     },
+    uMouse: { value: new THREE.Vector2(0.5, 0.5) },
   };
 
   const material = new THREE.ShaderMaterial({
@@ -46,7 +57,12 @@ export async function initBlackhole(canvasSelector) {
     fragmentShader,
     uniforms,
     transparent: true,
+    depthWrite: false, // Important for background
   });
+
+  material.onBeforeCompile = (shader) => {
+    console.log("Blackhole: Compiling shader...");
+  };
 
   const mesh = new THREE.Mesh(geometry, material);
   scene.add(mesh);
@@ -74,6 +90,13 @@ export async function initBlackhole(canvasSelector) {
     uniforms.uResolution.value.set(width, height);
   };
   window.addEventListener("resize", handleResize);
+
+  const handleMouseMove = (e) => {
+    const x = e.clientX / window.innerWidth;
+    const y = 1.0 - e.clientY / window.innerHeight; // Flip Y
+    uniforms.uMouse.value.set(x, y);
+  };
+  window.addEventListener("mousemove", handleMouseMove);
 }
 
 async function loadShader(url) {

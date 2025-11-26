@@ -1,10 +1,8 @@
 varying vec2 vUv;
-varying vec3 vPosition;
 
 void main() {
   vUv = uv;
-  vPosition = position;
-  vec3 transformed = position;
-  transformed.z += sin(position.x * 4.0) * 0.02;
-  gl_Position = projectionMatrix * modelViewMatrix * vec4(transformed, 1.0);
+  // Force full-screen quad by ignoring projection/modelview matrices
+  // The plane geometry is 2x2, centered at 0, so positions are -1 to 1
+  gl_Position = vec4(position.xy, 0.0, 1.0);
 }

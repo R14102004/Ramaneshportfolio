@@ -1,4 +1,7 @@
-import { initBlackhole } from "./blackhole.js";
+import * as THREE from "https://unpkg.com/three@0.152.0/build/three.module.js";
+window.THREE = THREE;
+
+import { initConstellation } from "./constellation.js";
 import { initCursor } from "./cursor.js";
 import { initTransitions } from "./transitions.js";
 
@@ -89,8 +92,8 @@ document.addEventListener("DOMContentLoaded", () => {
   initAnchorScroll();
   initProjectTilt();
 
-  if (!isMobile && page === "home") {
-    initBlackhole("#blackhole-canvas");
+  if (!isMobile) {
+    initConstellation("#blackhole-canvas");
   }
 });
 
@@ -294,7 +297,7 @@ function initHoverDistortion() {
         });
       });
     })
-    .catch(() => {});
+    .catch(() => { });
 }
 
 function initProjectSpace() {
